@@ -29,18 +29,19 @@ span {
     flex-direction: row;
     justify-content: flex-end;
 }
-.github-btn, .linkedin-btn, .devto-btn, .down-btn {
+.github-btn, .linkedin-btn, .devto-btn, .down-btn, .envelope-btn{
     background-color: #F6F6F4;
     border: none;
 }
-.fa-github, .fa-linkedin, .fa-dev, .fa-angle-double-down {
+.fa-github, .fa-linkedin, .fa-dev, .fa-angle-double-down, .fa-envelope {
     font-size: 35px;
     padding: 0vmin 1vmin 1vmin 0vmin;
     background-color: #F6F6F4;
     color: #F6F6F4;
+    transition: all 0.25s ease;
 }
-.fa-github:hover, .fa-linkedin:hover, .fa-dev:hover, .fa-angle-double-down:hover {
-    transform: scale(1.1);
+.fa-github:hover, .fa-linkedin:hover, .fa-dev:hover, .fa-angle-double-down:hover, .fa-envelope:hover {
+    transform: scale(1.25);
 }
 .down-btn {
     justify-self: center;
@@ -169,8 +170,12 @@ span {
     text-align: center;
     margin: 0;
 }
-.code-link {
+.code-link{
     color: #B1B1B1;
+}
+.link {
+    color: #B1B1B1;
+    font-size: 30px;
 }
 /*
 
@@ -184,6 +189,7 @@ span {
 }
 */
 #end-container{
+    padding-top: 200px;
     position: relative;
     top: 120vh;
     text-align: center;

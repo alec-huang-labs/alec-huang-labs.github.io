@@ -1,7 +1,14 @@
 
-$(document).ready(
-    function(){
-        
+$(window).on( "load", function() {
+        $(window).on("scroll", function(){
+            if($(window).scrollTop() === "300px"){
+                $(window).off("scroll");
+                $("#arrow1").addClass('animate__animated animate__bounceInLeft').show();
+                $("#arrow2").addClass('rotate animate__animated animate__bounceInRight').show();
+                $("#teddy-bio").addClass('rotate animate__animated animate__bounceInLeft').show();
+                $("#alec-bio").addClass('rotate animate__animated animate__bounceInRight').show();
+            }
+        });
         var $randomnbr = $('.nbr');
         var $timer= 10;
         var $data = 0;
@@ -31,8 +38,10 @@ $(document).ready(
                             $('.fa-github').css('color','#B1B1B1');
                             $('.fa-linkedin').css('color','#B1B1B1');
                             $('.fa-dev').css('color','#B1B1B1');
-                            $('.random').css('color', '#B1B1B1')
-                            $('.fa-angle-double-down').css('color', '#B1B1B1')
+                            $('.fa-envelope').css('color','#B1B1B1');
+                            $('#logo-container').addClass('animate__animated animate__bounceInDown');
+                            $('.fa-angle-double-down').css('color', '#B1B1B1');
+                            $('.random').css('color', '#B1B1B1');
                         }, 500)
                     }
                 }
@@ -61,6 +70,7 @@ $(document).ready(
         $("#quotes-desc").html("<p>First Complete Front-End Project I've ever built!When the Twitter button is pressed, user will be directed to twitter where the tweet will be pre-populated with the text and author of the quote.<br><br> View my Github Repo <a class = \"code-link\" href=\"https://github.com/alec-huang-labs/RandomQuotes\" target=\"_blank\">HERE</a>.</p>")
         $("#site-desc").html("<p>Animation built with JQuery on the landing page along with lots of SVG graphics to give the site a personal feel. A place to display myself (and Teddy) as well as my work to the world.<br><br> View my Github Repo <a class = \"code-link\" href=\"\" target=\"_blank\">HERE</a>.</p>")
     });
+
 /*
 $(window).load(function(){
     function showArrow() {
