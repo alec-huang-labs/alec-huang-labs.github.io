@@ -5,8 +5,8 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/31a78d904a.js"></script>
-  <script src="./circletype.min.js"></script>
-  <script src="./jquery.lettering-0.6.min.js"></script>
+  <script src="./libraries/circletype.min.js"></script>
+  <script src="./libraries/jquery.lettering-0.6.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./index.js"></script>
   <script src="./scrambler.js"></script>
@@ -69,7 +69,7 @@
     </div>
     
     <div id="aboutme-container">
-        <div id="teddy-bio">
+        <div class="bios" id="teddy-bio">
             <p>Hi, I'm Teddy. 
             <br> I'm a Springerdoodle With
             <br> experience in Stealing 
@@ -77,19 +77,22 @@
             <br> Fetching tennis balls
         </p>
         </div>
-        <img class="arrow" id="arrow1" src="./squiggle.svg"/>
+        <img class="arrow" id="arrow1" src="./images/squiggle.svg"/>
         <div id="alecTed-Container">
             <p id="curved-text">Teddy & Alec</p>
-            <img id="alecTed" src="./alecTed.png">
+            <img id="alecTed" src="./images/alecTed.png">
         </div>
-        <img class="arrow" id="arrow2" src="./squiggle2.svg"/>
-        <div id="alec-bio">
+        <img class="arrow" id="arrow2" src="./images/squiggle2.svg"/>
+        <div class="bios" id="alec-bio">
                 <p> Hi, I'm Alec. 
                 <br> I'm a self-taught developer 
                 <br> With dxpereince in HTML,
                 <br> CSS, JavaScript, React & D3
         </p>
         </div>
+        <div id="mobile-container">   
+        </div>
+    </div>
     </div>
     <div id="together-bio">
         <p>We live in New York 
@@ -99,52 +102,52 @@
     <div id="gallery">
         <div class="proj-container">
             <a href="https://alec-huang-labs.github.io/stravaMapCal/" target="_blank">
-                <img class="projects" src="./images/strava.png">
+                <img class="projects" id="strava-pic" src="./images/strava.png">
             </a>
             <div class="desc-container">
-                <p class="proj-title">Strava API Dashboard</p>
+                <p class="proj-title" id="strava-title">Strava API Dashboard</p>
                 <p class="desc" id="strava-desc"></p>
             </div>
         </div>
         <div class="proj-container">
             <div class="desc-container" >
-                <p class="proj-title">Calculator</p>
+                <p class="proj-title" id="calc-title">Calculator</p>
                 <p class="desc" id="calc-desc"></p>
             </div>
             <a href="https://alec-huang-labs.github.io/TerminalCalculator2.0/" target="_blank">
-            <img class="projects" src="./images/calc.png">
+            <img class="projects" id="calc-pic" src="./images/calc.png">
             </a>
         </div>
         <div class="proj-container">
             <a href="https://alec-huang-labs.github.io/markdownPreviewer/" target="_blank">
-                <img class="projects" src="./images/md.png">
+                <img class="projects" id="md-pic" src="./images/md.png">
             </a>
             <div class="desc-container" >
-                <p class="proj-title">Markdown language editor/previewer</p>
+                <p class="proj-title" id="md-title">Markdown language editor/previewer</p>
                 <p class="desc" id="md-desc"></p>
             </div>
         </div>
         <div class="proj-container">
             <div class="desc-container" >
-                <p class="proj-title">Random Quote Generator</p>
+                <p class="proj-title" id="quotes-title">Random Quote Generator</p>
                 <p class="desc" id="quotes-desc"></p>
             </div>
             <a href="https://alec-huang-labs.github.io/RandomQuotes/" target="_blank">
-                <img class="projects" src="./images/quotes.png">
+                <img class="projects" id="quotes-pic" src="./images/quotes.png">
             </a>
         </div>
         <div class="proj-container">
             <a href="" target="_blank">
-                <img class="projects" src="./images/site.png">
+                <img class="projects" id="site-pic" src="./images/site.png">
             </a>
-            <div class="desc-container" >
-                <p class="proj-title">Peronal Site (This!)</p>
+            <div class="desc-container">
+                <p class="proj-title" id="site-title">Peronal Site (This!)</p>
                 <p class="desc" id="site-desc"></p>
             </div>
         </div>
     </div>
     <div id="end-container">
         <p id="goodbye-message">Check Back soon for updates!<br>To get in touch, send a note to <a class='link' href="mailto:alec.huang.labs@gmail.com">alec.huang.labs@gmail.com</a></p>
-        <img id="new-yawk" src="./newyawk.svg">
+        <img id="new-yawk" src="./images/newyawk.svg">
     </div>
 </html>

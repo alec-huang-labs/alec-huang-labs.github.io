@@ -1,7 +1,6 @@
 
 $(window).on( "load", function() {
         ScrollReveal().reveal('.proj-container',{ delay: 500 })
-        //ScrollReveal().reveal('#goodbye-message',{ delay: 500 })
 
         var $randomnbr = $('.nbr');
         var $timer= 10;
@@ -41,37 +40,48 @@ $(window).on( "load", function() {
                 }
             })
         }
-        /*
-        $(".down-btn").click(function () {
-            $('#aboutme-container').scrollIntoView()
-        })
-        */
+        
         setInterval(value, $timer);
         $("#arrow1").hide();
         $("#arrow2").hide();
         $("#teddy-bio").hide();
         $("#alec-bio").hide();
         $(document).scroll(function() {
-            if($(this).scrollTop() >= $('#logo-container').offset().top) {
+            if($( window ).width() > 480 && $(this).scrollTop() >= $('#logo-container').offset().top) {
+                
                 $('#arrow1').addClass('animate__animated animate__bounceInLeft').show();
                 $("#arrow2").addClass('rotate animate__animated animate__bounceInRight').show();
                 $("#teddy-bio").addClass('rotate animate__animated animate__bounceInLeft').show();
                 $("#alec-bio").addClass('rotate animate__animated animate__bounceInRight').show();
             }
         });
-    
-        /*
+        if ($( window ).width() < 480){
+            $("#teddy-bio").show()
+            $("#alec-bio").show();
+            $("#mobile-container").append($("#teddy-bio")).css('display', 'flex')
+            $("#mobile-container").append($("#alec-bio")).css('display', 'flex')
+            $("#gallery").append($('#strava-title').css('display', 'block'))
+            $("#gallery").append($('#strava-desc').css('display', 'block'))
+            $("#gallery").append($('#strava-pic').css('display', 'block'))
+            $("#gallery").append($('#strava-pic').css('margin-bottom', '3rem'))
+            $("#gallery").append($('#calc-title').css('display', 'block'))
+            $("#gallery").append($('#calc-desc').css('display', 'block'))
+            $("#gallery").append($('#calc-pic').css('display', 'block'))
+            $("#gallery").append($('#calc-pic').css('margin-bottom', '3rem'))
+            $("#gallery").append($('#md-title').css('display', 'block'))
+            $("#gallery").append($('#md-desc').css('display', 'block'))
+            $("#gallery").append($('#md-pic').css('display', 'block'))
+            $("#gallery").append($('#md-pic').css('margin-bottom', '3rem'))
+            $("#gallery").append($('#quotes-title').css('display', 'block'))
+            $("#gallery").append($('#quotes-desc').css('display', 'block'))
+            $("#gallery").append($('#quotes-pic').css('display', 'block'))
+            $("#gallery").append($('#quotes-pic').css('margin-bottom', '3rem'))
+            $("#gallery").append($('#site-title').css('display', 'block'))
+            $("#gallery").append($('#site-desc').css('display', 'block'))
+            $("#gallery").append($('#site-pic').css('display', 'block'))
+            $("#gallery").append($('#site-pic').css('margin-bottom', '3rem'))
+        }
         
-        */
-        
-        /*
-        $("#alecTed").click(function() {
-            //$("#arrow1").addClass('animate__animated animate__bounceInLeft').show();
-            //$("#arrow2").addClass('rotate animate__animated animate__bounceInRight').show();
-            //$("#teddy-bio").addClass('rotate animate__animated animate__bounceInLeft').show();
-            //$("#alec-bio").addClass('rotate animate__animated animate__bounceInRight').show();
-        }) 
-        */
         new CircleType(document.getElementById('curved-text')).radius(200);
 
         $("#strava-desc").html(
@@ -85,13 +95,4 @@ $(window).on( "load", function() {
         $("#site-desc").html(
             "<p>Animation built with JQuery on the landing page along with lots of SVG graphics to give the site a personal feel. A place to display myself (and Teddy) as well as my work to the world.<br><br> View my Github Repo <a class = \"code-link\" href=\"\" target=\"_blank\">HERE</a>.</p>")
     });
-
-/*
-$(window).load(function(){
-    function showArrow() {
-        $('#curved-text').circleType({radius:135});
-    }
-    setTimeout(()=> showArrow(), 1000)
-})
-*/
 
