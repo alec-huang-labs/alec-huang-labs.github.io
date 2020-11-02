@@ -11,7 +11,11 @@
         font-size: 12px !important;
     }
     #down-arrow-container {
-        top: 85vh !important;
+        display: none !important;
+    }
+    #logo-container{
+        width: 100vw !important;
+        justify-content: space-around !important;
     }
     #aboutme-container {
         display: flex; 
