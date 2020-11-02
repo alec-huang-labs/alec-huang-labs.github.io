@@ -83,11 +83,17 @@
     .desc{
         display: none;
     }
+    #new-yawk{
+        width: 100vw; /* width of container */
+        height: 33vh; /* height of container */
+        object-fit: cover;
+    }
 }
 html {
     font-size: 16px;
 }
 body {
+    padding: none;
     font-family: sans-serif;
     font-size: 1.5rem;
     background-color: var(--bg);
