@@ -60,6 +60,10 @@ $(window).on( "load", function() {
             $("#alec-bio").show();
             $("#mobile-container").append($("#teddy-bio")).css('display', 'flex')
             $("#mobile-container").append($("#alec-bio")).css('display', 'flex')
+            $("#gallery").append($('#manhattanRE-title').css('display', 'block'))
+            $("#gallery").append($('#manhattanRE-desc').css('display', 'block'))
+            $("#gallery").append($('#manhattanRE-pic').css('display', 'block'))
+            $("#gallery").append($('#manhattanRE-pic').css('margin-bottom', '3rem'))
             $("#gallery").append($('#strava-title').css('display', 'block'))
             $("#gallery").append($('#strava-desc').css('display', 'block'))
             $("#gallery").append($('#strava-pic').css('display', 'block'))
@@ -68,22 +72,20 @@ $(window).on( "load", function() {
             $("#gallery").append($('#calc-desc').css('display', 'block'))
             $("#gallery").append($('#calc-pic').css('display', 'block'))
             $("#gallery").append($('#calc-pic').css('margin-bottom', '3rem'))
-            $("#gallery").append($('#md-title').css('display', 'block'))
-            $("#gallery").append($('#md-desc').css('display', 'block'))
-            $("#gallery").append($('#md-pic').css('display', 'block'))
-            $("#gallery").append($('#md-pic').css('margin-bottom', '3rem'))
-            $("#gallery").append($('#quotes-title').css('display', 'block'))
-            $("#gallery").append($('#quotes-desc').css('display', 'block'))
-            $("#gallery").append($('#quotes-pic').css('display', 'block'))
-            $("#gallery").append($('#quotes-pic').css('margin-bottom', '3rem'))
             $("#gallery").append($('#site-title').css('display', 'block'))
             $("#gallery").append($('#site-desc').css('display', 'block'))
             $("#gallery").append($('#site-pic').css('display', 'block'))
             $("#gallery").append($('#site-pic').css('margin-bottom', '3rem'))
+            $("#gallery").append($('#quotes-title').css('display', 'block'))
+            $("#gallery").append($('#quotes-desc').css('display', 'block'))
+            $("#gallery").append($('#quotes-pic').css('display', 'block'))
+            $("#gallery").append($('#quotes-pic').css('margin-bottom', '3rem'))
+
         }
         
         new CircleType(document.getElementById('curved-text')).radius(200);
-
+        $("#manhattanRE-desc").html(
+            "<p>Choropleth map of residential real estate sales within Manhattan. Data spans from Dec. 2019 to Nov. 2020 taken from the NYC Dept. of Finance. Hover over the Map after using the slider to find sales per month broken down by neighboorhood <br><br> View my Github Repo <a class = \"code-link\" href=\"https://github.com/alec-huang-labs/ManhattanRealEstate\" target=\"_blank\">HERE</a>.</p>")
         $("#strava-desc").html(
             "<p>The Map on the left displays my cumulative running routes. It is made with leaflet.js along with the mapbox light plug in. The Calender Heatmap on the right is made with D3.js.I Retrieved my personal running data by working with the Strava Api. <br><br> View my Github Repo <a class = \"code-link\" href=\"https://github.com/alec-huang-labs/stravaMapCal\" target=\"_blank\">HERE</a>.</p>")
         $("#calc-desc").html(
